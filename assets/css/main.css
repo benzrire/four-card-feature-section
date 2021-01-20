@@ -1,0 +1,229 @@
+html, body {
+  padding: 0;
+  margin: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+
+  background: hsl(0, 0%, 98%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.container {
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+br.visible-desktop {
+  display: block;
+}
+
+section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sc-feature {
+  padding-top: 80px;
+}
+
+.sc-feature h1 {
+  font-size: 36px;
+  font-weight: 200;
+  line-height: 1.4;
+  color: hsl(234, 12%, 34%);
+
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+.sc-feature h1 strong {
+  font-weight: 600;
+}
+
+.sc-feature p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsl(229, 6%, 66%);
+
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.sc-feature .feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sc-feature .feature > div {
+  width: 100%;
+}
+
+.sc-feature .feature .cards {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sc-feature .feature .cards:first-child {
+  padding-left: 0;
+}
+
+.sc-feature .feature .cards:last-child {
+  padding-right: 0;
+}
+
+.sc-feature .feature .cards .card {
+  position: relative;
+
+  border-radius: 7px;
+  background: white;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(84,158,242,0.15); 
+  box-shadow: 0px 10px 20px 0px rgba(84,158,242,0.15);
+
+  padding: 30px;
+  margin-bottom: 30px;
+
+  min-height: 190px;
+}
+
+.sc-feature .feature .cards .card:before,
+.sc-feature .feature .cards .card:after {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  border-radius: 7px;
+}
+
+.sc-feature .feature .cards .card:before {
+  background: #EEEEEE;
+  z-index: 100;
+}
+
+.sc-feature .feature .cards .card[data-box-color="cyan"]:before {
+  background: hsl(180, 62%, 55%);
+}
+
+.sc-feature .feature .cards .card[data-box-color="red"]:before {
+  background: hsl(0, 78%, 62%);
+}
+
+.sc-feature .feature .cards .card[data-box-color="yellow"]:before {
+  background: hsl(34, 97%, 64%);
+}
+
+.sc-feature .feature .cards .card[data-box-color="blue"]:before {
+  background: hsl(212, 86%, 64%);
+}
+
+.sc-feature .feature .cards .card:after {
+  background: white;
+  z-index: 110;
+
+  height: calc(100% - 5px);
+  top: 5px;
+
+  border-radius: 0 0 7px 7px;
+}
+
+.sc-feature .feature .cards .card .image,
+.sc-feature .feature .cards .card h2,
+.sc-feature .feature .cards .card p {
+  margin: 0;
+
+  position: relative;
+  z-index: 120;
+}
+
+.sc-feature .feature .cards .card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: hsl(234, 12%, 34%);
+
+  margin-bottom: 10px;
+}
+
+.sc-feature .feature .cards .card p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: hsl(229, 6%, 66%);
+
+  text-align: left;
+}
+
+.sc-feature .feature .cards .card .image {
+  position: absolute;
+
+  right: 30px;
+  bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  br.visible-desktop {
+    display: none;
+  }
+
+  .sc-feature {
+    padding-top: 85px;
+  }
+
+  .sc-feature .feature {
+    flex-direction: column;
+  }
+
+  .sc-feature .feature .cards {
+    padding: 0;
+  }
+
+  .sc-feature .feature .cards .card {
+    padding: 25px;
+    min-height: 170px;
+  }
+
+  .sc-feature h1 {
+    font-size: 24px;
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+  }
+
+  .sc-feature p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+
+    letter-spacing: -20;
+  }
+}
